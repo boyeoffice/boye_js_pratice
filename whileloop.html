@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WhileLoop</title>
+</head>
+<body>
+  <!--<div id="tweetDiv"></div>-->
+  <p>How many fingers are you holding up?</p>
+  <select id="myNumber">
+    <option>0</option>
+    <option>1</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+    
+  <button id="guess">Guess</button>
+  <script type="text/javascript">
+    document.querySelector("#guess").onclick = function(){
+      var myNumber = document.querySelector("#myNumber").value;
+      var gotIt = false;
+      var numberOfGuesses = 1
+      while(gotIt == false){
+      var guess = Math.random();
+      guess = guess * 6;
+      guess = Math.floor(guess);
+      if(guess == myNumber){
+        //Computer is correct
+        gotIt = true
+        alert("Got it! It was a " + guess + ". It took me " +  numberOfGuesses + " guesses" )
+      }else{
+        //Computer is wrong
+        numberOfGuesses++; 
+      }
+     }
+    }
+    /*var tweetString = "";
+    var tweets = [
+      "Hi everyone",
+      "I love cornflakes",
+      "Night night :)",
+      "Sweet dream"
+    ]
+    var i = 0;
+    while(i < tweets.length){
+      tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+      i++;
+    }
+    document.querySelector("#tweetDiv").innerHTML = tweetString;*/
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forloop</title>
+</head>
+<body>
+  <div id="tweetDiv"></div>
+  <script type="text/javascript">
+   /* for (var i = 3; i < 7; i++){
+      //alert(i);
+    }
+    for(var i = 5; i > 0; i--){
+      alert(i)
+    }*/
+    var tweetString = "";
+    var tweets = [
+      "Hi everyone",
+      "I love cornflakes",
+      "Night night :)",
+      "Sweet dream"
+    ]
+    /*for(var i = 0; i < 3; i++){
+      alert(tweets[i])
+    }*/
+    for(var i = 0; i < tweets.length; i++){
+      //alert(tweets[i]);
+      tweetString = tweetString + "<p>" + tweets[i] + "</p>"
+    }
+    document.querySelector("#tweetDiv").innerHTML = tweetString;
+  </script>
+</body>
+</html>
