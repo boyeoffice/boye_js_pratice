@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h4 id="outputText"></h4>
+    <p>Please enter a prime number</p>
+    <input type="text" id="inputText" name="">
+    <button type="button" id="button">Go</button>
+    <script type="text/javascript">
+      const button = document.querySelector('#button')
+      const inputText = document.querySelector('#inputText').value
+      const outputText = document.querySelector('#outputText')
+
+      button.addEventListener('click', () => {
+        var i = 2
+        var isPrime = true
+        while(i < inputText){
+          if(inputText / i == 0){
+            isPrime = false
+          }
+          i++
+        }
+
+        if(isPrime){
+          outputText.innerHTML = i + " is a prime number"
+        }else{
+          outputText.innerHTML = i + " is not a prime number"
+        }
+      })
+    </script>
+  </body>
+</html>
